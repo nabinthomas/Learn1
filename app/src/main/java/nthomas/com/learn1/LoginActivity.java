@@ -394,13 +394,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
         @Override
         protected Boolean doInBackground(Void... params) {
-            // TODO: attempt authentication against a network service.
+            // TODO: remove the dummy authentication codes.
 
             try {
                 // Simulate network access.
                 Thread.sleep(2000);
 
-                if (mPassword == "") {
+                if (mPassword.equals("")) {
                     mPassword = "1234";
                     createAccount(mEmail, mPassword);
                 }
