@@ -361,7 +361,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                             }
                             else {
                                 Toast.makeText(LoginActivity.this, "Authentication Successful.",
-                                        Toast.LENGTH_SHORT).show();                Intent intent = new Intent(mOriginator, MainActivity.class);
+                                        Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(mOriginator, MainActivity.class);
                                 EditText editText = (EditText) findViewById(R.id.email);
                                 String message = editText.getText().toString();
                                 intent.putExtra(LoginActivity.EMAIL_ID, message);

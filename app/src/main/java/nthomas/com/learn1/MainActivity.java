@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
                     .setAction("Action", null).show();
             return true;
         }
+        else if (id == R.id.action_lock) {
+            Intent intent = new Intent(this, LockScreenActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(WindowManager.LayoutParams.TYPE_SYSTEM_ERROR);
+            startActivity(intent);
+        }
+
 
         return super.onOptionsItemSelected(item);
     }
